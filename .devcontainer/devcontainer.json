@@ -1,5 +1,5 @@
 {
-    "name": "texlive",
+    "name": "devcontainer-ubuntu-texlive-ja",
     "dockerComposeFile": "docker-compose.yml",
     "extensions": [
         "formulahendry.terminal",
