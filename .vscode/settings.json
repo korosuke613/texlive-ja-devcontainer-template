@@ -1,17 +1,5 @@
 {
-    // editor.wordSeparators: 単語単位での移動を行う場合の区切り文字を指定
-    // 日本語文書で単語移動を使うため、助詞や読点、括弧を区切り文字として指定する
     "editor.wordSeparators": "./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}`~?　、。「」【】『』（）！？てにをはがのともへでや",
-
-    // 設定: LaTeX Workshop
-
-    // LaTeX Workshop ではビルド設定を「Tool」と「Recipe」という2つで考える
-    //   Tool: 実行される1つのコマンド。コマンド (command) と引数 (args) で構成される
-    //   Recipe: Tool の組み合わわせを定義する。Tool の組み合わせ (tools) で構成される。
-    //           tools の中で利用される Tool は "latex-workshop.latex.tools" で定義されている必要がある。
-
-
-    // latex-workshop.latex.tools: Tool の定義
     "latex-workshop.latex.tools": [
         // latexmk を利用した uplatex によるビルドコマンド
         {
@@ -19,14 +7,6 @@
           "command": "latexmk",
           "args": [
             "-f", "-gg", "-synctex=1", "-interaction=nonstopmode", "-file-line-error", "%DOC%"
-          ]
-        },
-        // latexmk を利用した xelatex によるビルドコマンド
-        {
-          "name": "Latexmk (XeLaTeX)",
-          "command": "latexmk",
-          "args": [
-            "-f", "-gg", "-pv", "-xelatex", "-synctex=1", "-interaction=nonstopmode", "-file-line-error", "%DOC%"
           ]
         },
         // latexmk を利用した platex によるビルドコマンド
@@ -38,25 +18,10 @@
             "-f", "-gg", "-pv", "-latex='platex'", "-latexoption='-kanji=utf8 -no-guess-input-env'", "-synctex=1", "-interaction=nonstopmode", "-file-line-error", "%DOC%"
           ]
         },
-        // latexmk を利用した lualatex によるビルドコマンド
-        {
-          "name": "Latexmk (LuaLaTeX)",
-          "command": "latexmk",
-          "args": [
-            "-f", "-gg", "-pv", "-lualatex", "-synctex=1", "-interaction=nonstopmode", "-file-line-error", "%DOC%"
-          ]
-        }
     ],
 
     // latex-workshop.latex.recipes: Recipe の定義
     "latex-workshop.latex.recipes": [
-        // XeLaTeX で書かれた文書のビルドレシピ
-        {
-          "name": "XeLaTeX",
-          "tools": [
-            "Latexmk (XeLaTeX)"
-          ]
-        },
         // LaTeX(upLaTeX) で書かれた文書のビルドレシピ
         {
           "name": "upLaTeX",
@@ -71,13 +36,6 @@
             "Latexmk (pLaTeX)"
           ]
         },
-        // LuaLaTeX で書かれた文書のビルドレシピ
-        {
-          "name": "LuaLaTeX",
-          "tools": [
-            "Latexmk (LuaLaTeX)"
-          ]
-        }
     ],
 
     // latex-workshop.latex.magic.args: マジックコメント付きの LaTeX ドキュメントをビルドする設定
