@@ -5,7 +5,7 @@ VS Code Remote Developmentの機能を用いて、LaTeX環境を容易に構築�
 [![](https://images.microbadger.com/badges/image/korosuke613/ubuntu-texlive-ja-devcontainer.svg)](https://microbadger.com/images/korosuke613/ubuntu-texlive-ja-devcontainer "Get your own image badge on microbadger.com")
 
 
-Dockerイメージは、[ubuntu-texlive-ja](https://cloud.docker.com/repository/docker/korosuke613/ubuntu-texlive-ja)を利用しています。
+Dockerイメージは、[ubuntu-texlive-ja](https://hub.docker.com/r/korosuke613/ubuntu-texlive-ja)を利用しています。
 
 (**Dockerが必要です**)
 
