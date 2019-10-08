@@ -7,5 +7,6 @@ services:
     volumes:
       - ../:/workdir
       - ~/.gitconfig:/root/.gitconfig
+      - ./.latexmkrc:/root/.latexmkrc
     environment:
       SHELL: "/bin/bash"
